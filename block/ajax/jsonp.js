@@ -20,6 +20,8 @@ function jsonp(config) {
   var callbackName = ('jsonp_' + Math.random()).replace(".", "");
   var oHead = document.getElementsByTagName('head')[0];
   var oScript = document.createElement('script');
+  // oScript.setAttribute('type','text/javascript');
+  // oScript.type = "text/javascript";
   oHead.appendChild(oScript);
 
   //创建jsonp回调函数
@@ -33,7 +35,9 @@ function jsonp(config) {
 
   //发送请求
   oScript.src = options.url + '?' + callbackName;
-  if (options.time) {  //设置超时处理
+
+  //设置超时处理
+  if (options.time) {
     oScript.timer = setTimeout(function () {
       window[callbackName] = null;
       oHead.removeChild(oScript);
