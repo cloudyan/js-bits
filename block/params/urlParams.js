@@ -5,12 +5,12 @@
 **/
 
 //规则规则，参数都为 key-value 值形式，若值为 url，必须 encodeURIComponent 处理
-function getUrlParam(url, key) {
+function getUrlParams(url, key) {
   if (!url) url = location.href;
 
   var searchReg = /([^&=?]+)=([^&]+)/g;
   var urlReg = /\/+.*\?/;
-  var arrayReg = /(.+)\[\]$/;
+  var arrayReg = /(.+)\\$/;
   var urlParams = {};
   var match, name, value, isArray;
 
@@ -36,4 +36,10 @@ function getUrlParam(url, key) {
   }
 
   return key ? urlParams[key] : urlParams;
+}
+
+
+//方法二
+var getUrlParam = function(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '= ([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 };

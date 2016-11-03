@@ -15,7 +15,7 @@
       fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 
   this.Class = function(){};
-  
+
   //Class.extend = function(prop) {
   Class.extend = function extend(prop) {
     var _super = this.prototype;
@@ -56,8 +56,9 @@ if (typeof prop[name] == "function"
 */
     }
     function Class() {
-      if ( !initializing && this.init )
+      if ( !initializing && this.init ) {
         this.init.apply(this, arguments);
+      }
     }
     Class.prototype = prototype;
     Class.constructor = Class;
