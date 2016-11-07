@@ -18,15 +18,15 @@ function quickSort(arr){
   //找基准，并把基准从原数组删除
   var pivot = arr.splice(pivotIndex, 1)[0];
   //定义左右数组
-  var left=[],
-      right=[];
+  var left = [],
+      right = [];
 
   //比基准小的放在left，比基准大的放在right
   for(var i=0; i<len; i++){
     if(arr[i] <= pivot){
-      left.push(arr[i])
+      left.push(arr[i]);
     }else{
-      right.push(arr[i])
+      right.push(arr[i]);
     }
   }
   //递归
