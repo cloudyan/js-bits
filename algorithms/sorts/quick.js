@@ -10,18 +10,19 @@
 
 function quickSort(arr){
   //如果数组<=1,则直接返回
-  if(arr.length <= 1){
+  var len = arr.length;
+  if(len <= 1){
     return arr;
   }
-  var pivotIndex = Math.floor(arr.length/2);
+  var pivotIndex = Math.floor(len/2);
   //找基准，并把基准从原数组删除
-  var pivot = arr.splice(pivotIndex,1)[0];
+  var pivot = arr.splice(pivotIndex, 1)[0];
   //定义左右数组
   var left=[],
       right=[];
 
   //比基准小的放在left，比基准大的放在right
-  for(var i=0;i<arr.length;i++){
+  for(var i=0; i<len; i++){
     if(arr[i] <= pivot){
       left.push(arr[i])
     }else{
