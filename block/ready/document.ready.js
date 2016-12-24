@@ -18,10 +18,10 @@ document.ready = function (callback) {
    //兼容IE
   else if (document.attachEvent) {
     document.attachEvent('onreadytstatechange', function () {
-        if (document.readyState == "complete") {
-            document.detachEvent("onreadystatechange", arguments.callee);
-            callback();
-         }
+      if (document.readyState == "complete") {
+        document.detachEvent("onreadystatechange", arguments.callee);
+        callback();
+      }
     })
   }
   else if (document.lastChild == document.body) {
