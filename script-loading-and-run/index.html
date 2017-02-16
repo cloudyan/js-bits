@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试 script 标签加载时序与执行时序</title>
+  <style>
+  small {color: gray;}
+  </style>
+</head>
+<body>
+<p>测试 script 标签加载时序与执行时序</p>
+
+<div id="test">正在加载中...</div>
+
+<script>
+var domTest = document.querySelector('#test');
+var result = '';
+function log(msg){
+  var currentScript = document.currentScript;
+  currentScript = (currentScript && currentScript.src || 'inline script').replace(location.origin, '');
+  result = result + '<br><small>' + currentScript + '</small><br>' + msg + '<br>';
+}
+console.log = log;
+</script>
+
+<script src="a.js"></script>
+<script src="b.js"></script>
+<script src="c.js"></script>
+<script>
+console.log('d')
+$(function(){
+  console.log('inline ready');
+})
+$(function(){
+  setTimeout(function(){
+    domTest.innerHTML = result;
+  }, 100)
+})
+</script>
+</body>
+</html>
