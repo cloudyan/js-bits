@@ -1,7 +1,7 @@
 
 # script 加载时序与执行时序
 
-这里对加载时序以及执行时序做一个验证，[详细参看测试示例](//webcoding.github.io/js-bit/script-loading-and-run/)
+这里对加载时序以及执行时序做一个验证，[详细参看测试示例](https://webcoding.github.io/js-bits/script-loading-and-run/)
 
 还可以参看[文档](https://segmentfault.com/a/1190000000515181)
 
