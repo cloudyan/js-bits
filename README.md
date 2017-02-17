@@ -3,6 +3,14 @@ JavaScript concepts explained with code.
 
 Community contributions welcome :)
 
+**Translations by community:**
+
+- 中文版 (Chinese): [js-bits-cn](https://github.com/ecmadao/js-bits-cn)
+
+---
+
+### Topics
+
 * [AMD CommonJS and ES6 Modules Usage](js/amd-commonjs-es6modules.js)
 * [Array concat() push()](js/array-concat-push.js)
 * [Array every() some()](js/array-every-some.js)
