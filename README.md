@@ -1,6 +1,21 @@
 #JS Bits
 JavaScript concepts explained with code.
 
+- string
+- array
+- dom
+- scope 作用域
+- class 类
+- oop 面向对象
+- 函数式编程
+- sort 排序
+
+参考：
+
+- https://github.com/ecmadao/js-bits-cn
+- https://github.com/webcoding/js-bits
+
+
 Community contributions welcome :)
 
 **Translations by community:**
