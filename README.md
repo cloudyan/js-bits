@@ -10,12 +10,6 @@ JavaScript concepts explained with code.
 - 函数式编程
 - sort 排序
 
-参考：
-
-- https://github.com/ecmadao/js-bits-cn
-- https://github.com/webcoding/js-bits
-
-
 Community contributions welcome :)
 
 **Translations by community:**
