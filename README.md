@@ -15,6 +15,10 @@ Community contributions welcome :)
 **Translations by community:**
 
 - 中文版 (Chinese): [js-bits-cn](https://github.com/ecmadao/js-bits-cn)
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+- https://dev.to/srebalaji/es6-for-beginners-with-example-c7
+- https://snipcart.com/blog/learn-vanilla-javascript-before-using-js-frameworks
 
 ---
 
