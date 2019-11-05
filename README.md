@@ -1,11 +1,24 @@
 #JS Bits
 JavaScript concepts explained with code.
 
+- string
+- array
+- dom
+- scope 作用域
+- class 类
+- oop 面向对象
+- 函数式编程
+- sort 排序
+
 Community contributions welcome :)
 
 **Translations by community:**
 
 - 中文版 (Chinese): [js-bits-cn](https://github.com/ecmadao/js-bits-cn)
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+- https://dev.to/srebalaji/es6-for-beginners-with-example-c7
+- https://snipcart.com/blog/learn-vanilla-javascript-before-using-js-frameworks
 
 ---
 

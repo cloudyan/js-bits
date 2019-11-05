@@ -1,5 +1,4 @@
-http://github.com/pandoraui/inherit
-
+# es5 实现继承
 
 // 这里推荐参看 john resig 版本去理解
 
@@ -9,10 +8,8 @@ http://github.com/pandoraui/inherit
 
 通过示例分析及用法展示，更深入的了解使用方式及场景
 
-
-```
+```js
 // 简单的例子（john resig）
-
 var Foo = Class.extend({
   qux: function() {
     return "Foo.qux";
@@ -25,7 +22,6 @@ var Bar = Foo.extend({
 });
 
 //当 Foo.extends 被执行, 在 qux 方法中由于存在 this._super 所以 Bar原型上的qux 实际上应该是这样的:
-
 Bar.prototype.qux = function () {
   var tmp = this._super;
   this._super = Foo.prototype.qux;
@@ -35,13 +31,12 @@ Bar.prototype.qux = function () {
   this._super = tmp;
   return ret;
 }
-
 ```
 
 其他示例：
 
+```js
 // blade 版本
-
 var Super = _.inherit({
   name: 'xiaohan',
   hello: function(){
@@ -58,9 +53,9 @@ var Sub = _.inherit(Super, {
     return 'hello ' + this.name;
   }
 });
+```
 
-
-### Prototype、__proto__与Object、Function关系介绍
+## Prototype、__proto__与Object、Function关系介绍
 
 参看：http://www.blogjava.net/heavensay/archive/2013/10/20/405440.html
 
@@ -70,7 +65,7 @@ var Sub = _.inherit(Super, {
 
 原型链正是基于__proto__才得以形成 (note：不是基于函数对象的属性prototype)。
 
-```
+```js
 var o1 = {};              // typeof o1 === "object"
 var o2 =new Object();     // typeof o2 === "object"
 
@@ -86,7 +81,7 @@ var f3 = new Function('str','console.log(str)'); // typeof f3 === "function"
 
 Js中每个对象(null除外)都和另一个对象相关联，通过以下例子跟内存效果图来分析Function、Object、Prototype、__proto__对象间的关系。
 
-```
+```js
 function Animal(){  }
 var anim = new Animal();
 
@@ -145,10 +140,9 @@ Function.prototype 函数对象图内部表示 prototype 属性的红色虚框�
 
 http://www.blogjava.net/heavensay/archive/2013/10/20/405440.html
 
-
-
 参考：
 
+- https://github.com/pandoraui/inherit
 - [javascript原理介绍](http://www.cnblogs.com/fool/category/264215.html)
 - [JavaScript 的原型对象 Prototype](http://www.libuchao.com/2012/05/14/prototypes-in-javascript/)
 - [理解js中的原型链，prototype与__proto__的关系](http://rockyuse.iteye.com/blog/1426510)
