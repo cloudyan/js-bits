@@ -6,18 +6,7 @@ function theWeek() {
   if (years < 1000){
     years += 1900;
   }
-  var days = new Array(12);
-  days[0] = 31;
-  days[2] = 31;
-  days[3] = 30;
-  days[4] = 31;
-  days[5] = 30;
-  days[6] = 31;
-  days[7] = 31;
-  days[8] = 30;
-  days[9] = 31;
-  days[10] = 30;
-  days[11] = 31;
+  var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   //判断是否为闰年，针对2月的天数进行计算
   if (Math.round(now.getYear() / 4) == now.getYear() / 4) {

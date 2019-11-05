@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>缓存实现-最近最少原则</title>
+  <meta charset="UTF-8">
+  <script src="cache.js"></script>
+</head>
+<body>
+
+<script>
+var cache = new Cache(3)
+
+cache.put("v-on", {
+  expression: "click:show"
+})
+
+cache.put("v-for", {
+  expression: "item for itmes"
+})
+
+cache.put("v-if", {
+  expression: "a if b"
+})
+
+cache.put("test", {
+  expression: "test"
+})
+
+// var hit = cache.get("v-if");
+
+// console.log(hit)
+</script>
+
+</body>
+</html>
